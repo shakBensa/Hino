@@ -50,7 +50,7 @@ function App() {
         : <img src={CheckedBox} alt="Checked" style={{marginBottom:'5px'}} onClick={()=>setClicked(false)}></img>}
 
         </div>
-        <p className='font-face-gm' style={{color:'white',margin:'0',paddingTop:'5px',fontSize:24,}} >יוניון רכב תעשייתי</p> 
+        <p className='font-face-gm' style={{color:'white',margin:'0',paddingTop:'10px',fontSize:24,}} >יוניון רכב תעשייתי</p> 
 
         </div>
         <img src={Logo} alt="Hino Banner" style={{padding:'15px'}}></img>
