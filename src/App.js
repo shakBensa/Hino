@@ -43,7 +43,7 @@ function App() {
             style={{ opacity: touched ? 0.8 : 1, transition: 'opacity 200ms ease' }}
           ></img>
         <div style={{display:'flex'}} >
-        <p className='regular' style={{color:'white',margin:'0',fontSize:14,marginRight:'10px',marginLeft:'11px'}} >אני מאשר קבלת חומרים פרסומים</p> 
+        <p className='regular' style={{color:'white',margin:'0',fontSize:14,marginRight:'10px',marginLeft:'11px'}} >אני מאשר קבלת חומרים פרסומיים</p> 
 
 
         {!clicked? <img src={CheckBox} alt="CheckBox" style={{marginBottom:'5px'}} onClick={()=>setClicked(true)}></img> 
