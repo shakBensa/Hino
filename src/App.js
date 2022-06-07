@@ -1,4 +1,4 @@
-import TopBanner from './Assets/TopBanner.png';
+import Form from './Assets/FORM.png';
 import MainTruck from './Assets/MainTruck.png';
 import Logo from './Assets/LogoTOYOTA.png';
 import Desc from './Assets/Description.png';
@@ -19,7 +19,7 @@ function App() {
     <div className="App"
     >
       <div className='container'>
-      <img src={Logo} alt="Hino Banner" style={{padding:13}}></img>
+      <img src={Logo} alt="Hino Banner" style={{padding:13,height:'19px'}}></img>
         <img src={MainTruck} alt="MainTruck" height={'385px'}></img>
         <img src={Desc} alt="Description" style={{position:'absolute',width:'237px',height:'295px',marginTop:50,marginLeft:37}}></img>
         <p className='font-face-gm' style={{color:'white',margin:'0',marginTop:'10px' ,marginBottom:5,fontSize:20,display:'flex',justifyContent:'center'}} >:השאר פרטים ונצא לדרך</p> 
