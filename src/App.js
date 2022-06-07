@@ -24,7 +24,7 @@ function App() {
         <img src={MainTruck} alt="MainTruck"  ></img>
         <img src={Desc} alt="Description" style={{position:'absolute',width:'237px',height:'295px',marginTop:50,marginLeft:37}}></img>
         <p className='regular' 
-        style={{color:'white',margin:'0',marginTop:'10px',marginBottom:5,
+        style={{color:'white',margin:'0',marginTop:'10px',marginBottom:'8px',
         fontSize:23,display:'flex',justifyContent:'center',}} >:השאר פרטים ונצא לדרך</p> 
     
         <div className='inputContainer' style={{height:'180px',marginTop:'0px'}}>
