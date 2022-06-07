@@ -33,14 +33,15 @@ input {
   height: 20px;
   -webkit-box-shadow:inset 0 0 10px #000;
      -moz-box-shadow:inset 0 0 10px #000;
-     box-shadow: inset 0 11px 9px -7px rgba(0,0,0,0.4);
+     box-shadow: inset 0 15px 3px -12px rgba(0,0,0,0.5);
 border: transparent ;
+border-radius: 2px;
   background: white;
 }
 .inputContainer{
   display: flex;
   flex-direction: column;
-  gap:0.5rem;
+  gap:0.4rem;
   justify-content: center;
   align-items: center;
  margin:auto
