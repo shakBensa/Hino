@@ -19,23 +19,19 @@ function App() {
     <div className="App"
     >
       <div className='container'>
-      {/* <img src={TopBanner} alt="Hino Banner"></img> */}
       <img src={Logo} alt="Hino Banner" style={{padding:13}}></img>
         <img src={MainTruck} alt="MainTruck" height={'385px'}></img>
         <img src={Desc} alt="Description" style={{position:'absolute',width:'237px',height:'295px',marginTop:50,marginLeft:37}}></img>
-        <p className='font-face-gm' style={{color:'white',margin:'0',marginTop:'15px' ,padding:0,fontSize:20,display:'flex',justifyContent:'center'}} >:השאר פרטים ונצא לדרך</p> 
-        <div className='inputContainer' style={{height:'200px'}}>
-
+        <p className='font-face-gm' style={{color:'white',margin:'0',marginTop:'10px' ,marginBottom:5,fontSize:20,display:'flex',justifyContent:'center'}} >:השאר פרטים ונצא לדרך</p> 
+    
+        <div className='inputContainer' style={{height:'180px'}}>
         <input value={name} 
-        // onFocus={()=>setName('')}
         placeholder='שם מלא' 
         onChange={(e) => setName(e.target.value)} required ></input>
         <input value={phone}
-        // onFocus={()=>setPhone('')} 
         placeholder='נייד'
         onChange={(e) => setPhone(e.target.value)} required ></input>
         <input value={mail}
-        // onFocus={()=>setMail('')} 
         placeholder='מייל'
         onChange={(e) => setMail(e.target.value)} required ></input>
         <img src={Send} alt="Send"
@@ -45,7 +41,6 @@ function App() {
           ></img>
         <div style={{display:'flex'}} >
         <p className='regular' style={{color:'white',margin:'0',fontSize:14,marginRight:'10px',marginLeft:'11px'}} >אני מאשר קבלת חומרים פרסומים</p> 
-        {/* <button ></button> */}
 
 
         {!clicked? <img src={CheckBox} alt="CheckBox" style={{marginBottom:'5px'}} onClick={()=>setClicked(true)}></img> 

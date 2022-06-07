@@ -50,7 +50,7 @@ border: transparent ;
   flex-direction: column;
   justify-content: space-between; 
   width:320px ;
-  height:693px;
+  height:720px;
   background: rgb(236,28,37);
   background: linear-gradient(90deg, rgb(238,28,37) 0%, rgb(238,28,37) 58%, rgba(213,22,34,1) 68%, rgb(143,2,19) 100%);
 }
