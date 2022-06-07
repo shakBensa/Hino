@@ -1,6 +1,3 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
   height: 40vmin;
@@ -12,9 +9,52 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+::placeholder{
+  color: black;
+}
+.font-face-gm {
+  font-family: "almoni-neue-medium-aaa";
+ }
+ .regular{
+   font-family:"almoni-neue-regular-aaa" ;
+ }
+input {
+  font-family: "almoni-neue-medium-aaa";
+  font-size: 18px ;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 207px;
+  height: 20px;
+  -webkit-box-shadow:inset 0 0 10px #000;
+     -moz-box-shadow:inset 0 0 10px #000;
+     box-shadow: inset 0 11px 9px -7px rgba(0,0,0,0.4);
+border: transparent ;
+  background: white;
+}
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
+  justify-content: center;
+  align-items: center;
+ margin:auto
+}
 
-.App-header {
-  background-color: #282c34;
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  width:320px ;
+  height:693px;
+  background: rgb(236,28,37);
+  background: linear-gradient(90deg, rgb(238,28,37) 0%, rgb(238,28,37) 58%, rgba(213,22,34,1) 68%, rgb(143,2,19) 100%);
+}
+.header{
+}
+​
+.App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
