@@ -23,7 +23,7 @@ function App() {
       <img src={Logo} alt="Hino Banner" style={{padding:13}}></img>
         <img src={MainTruck} alt="MainTruck" height={'385px'}></img>
         <img src={Desc} alt="Description" style={{position:'absolute',width:'237px',height:'295px',marginTop:50,marginLeft:37}}></img>
-        <p className='font-face-gm' style={{color:'white',margin:'0',marginTop:'15px' ,padding:0,fontSize:20,}} >:השאר פרטים ונצא לדרך</p> 
+        <p className='font-face-gm' style={{color:'white',margin:'0',marginTop:'15px' ,padding:0,fontSize:20,display:'flex',justifyContent:'center'}} >:השאר פרטים ונצא לדרך</p> 
         <div className='inputContainer' style={{height:'200px'}}>
 
         <input value={name} 
