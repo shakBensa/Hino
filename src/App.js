@@ -20,13 +20,14 @@ function App() {
     >
       <div className='container'>
       <img src={Logo} alt="Hino Banner" style={{padding:13,height:'19px'}}></img>
-        <img src={MainTruck} alt="MainTruck" height={'385px'}></img>
+      <div style={{height:'17px',backgroundColor:'black'}}></div>
+        <img src={MainTruck} alt="MainTruck"  ></img>
         <img src={Desc} alt="Description" style={{position:'absolute',width:'237px',height:'295px',marginTop:50,marginLeft:37}}></img>
-        <p className='font-face-gm' 
+        <p className='regular' 
         style={{color:'white',margin:'0',marginTop:'10px',marginBottom:5,
-        fontSize:23,display:'flex',justifyContent:'center'}} >:השאר פרטים ונצא לדרך</p> 
+        fontSize:23,display:'flex',justifyContent:'center',}} >:השאר פרטים ונצא לדרך</p> 
     
-        <div className='inputContainer' style={{height:'180px'}}>
+        <div className='inputContainer' style={{height:'180px',marginTop:'0px'}}>
         <input value={name} 
         placeholder='שם מלא' 
         onChange={(e) => setName(e.target.value)} required ></input>

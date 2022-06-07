@@ -1,7 +1,7 @@
 body{
 display: flex;
 justify-content: center;
-padding:5px;
+padding:10px;
 }
 .App-logo {
   height: 40vmin;
@@ -15,6 +15,7 @@ padding:5px;
 }
 ::placeholder{
   color: black;
+  font-family:"almoni-neue-bold-aaa" ;
 }
 .font-face-gm {
   font-family: "almoni-neue-medium-aaa";
@@ -24,7 +25,7 @@ padding:5px;
  }
 input {
   font-family: "almoni-neue-medium-aaa";
-  font-size: 18px ;
+  font-size: 16px ;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -52,7 +53,7 @@ border-radius: 2px;
   flex-direction: column;
   justify-content: space-between; 
   width:320px ;
-  height:720px;
+  height:693px;
   background: rgb(236,28,37);
   background: linear-gradient(90deg, rgb(238,28,37) 0%, rgb(238,28,37) 58%, rgba(213,22,34,1) 68%, rgb(143,2,19) 100%);
 }
