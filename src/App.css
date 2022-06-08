@@ -1,18 +1,53 @@
 body{
 display: flex;
 justify-content: center;
-padding:10px;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+padding:5px
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 787px) {
+  body{
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    }
+  input {
+    font-family: "almoni-neue-medium-aaa";
+    font-size: 16px ;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 207px;
+    height: 20px;
+    /* -webkit-box-shadow:inset 0 0 10px #000; */
+       /* -moz-box-shadow:inset 0 0 10px #000; */
+       box-shadow: inset 0px 15px 3px -12px rgba(0,0,0,0.5);
+  border: transparent ;
+  border-radius: 1px;
+    background: white;
+  }
+  .inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap:0.4rem;
+    justify-content: center;
+    align-items: center;
+   margin:auto
+  }
+  
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    width:320px ;
+    height:693px;
+    background: rgb(236,28,37);
+    background: linear-gradient(90deg, rgb(238,28,37) 0%, rgb(238,28,37) 58%, rgba(213,22,34,1) 68%, rgb(143,2,19) 100%);
   }
 }
+
+
+
 ::placeholder{
   color: black;
   font-family:"almoni-neue-bold-aaa" ;
@@ -23,40 +58,7 @@ padding:10px;
  .regular{
    font-family:"almoni-neue-regular-aaa" ;
  }
-input {
-  font-family: "almoni-neue-medium-aaa";
-  font-size: 16px ;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 207px;
-  height: 20px;
-  /* -webkit-box-shadow:inset 0 0 10px #000; */
-     /* -moz-box-shadow:inset 0 0 10px #000; */
-     box-shadow: inset 0px 15px 3px -12px rgba(0,0,0,0.5);
-border: transparent ;
-border-radius: 1px;
-  background: white;
-}
-.inputContainer{
-  display: flex;
-  flex-direction: column;
-  gap:0.4rem;
-  justify-content: center;
-  align-items: center;
- margin:auto
-}
 
-.container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; 
-  width:320px ;
-  height:693px;
-  background: rgb(236,28,37);
-  background: linear-gradient(90deg, rgb(238,28,37) 0%, rgb(238,28,37) 58%, rgba(213,22,34,1) 68%, rgb(143,2,19) 100%);
-}
 .header{
 }
 ​

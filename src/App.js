@@ -5,7 +5,8 @@ import Desc from './Assets/Description.png';
 import Send from './Assets/Send.png';
 import CheckedBox from './Assets/ClickedBox.png';
 import CheckBox from './Assets/CheckBox.png';
-import {useState} from 'react'
+import Desktop from './Desktop';
+import {useState,useEffect} from 'react'
 import './App.css';
 import './fonts/almoni-neue-medium-aaa.otf'
 function App() {
@@ -14,9 +15,18 @@ function App() {
   const [phone, setPhone] = useState("");
   const [mail, setMail] = useState("");
   const [touched, touchedSet] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const updateWidth = () => {
+    setWindowWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
 
-  return (
-    <div className="App"
+  },[])
+
+  const mobile = ()=>{
+    return <div className="App"
     >
       <div className='container'>
       <img src={Logo} alt="Hino Banner" style={{padding:13,height:'19px'}}></img>
@@ -59,7 +69,13 @@ function App() {
 
         
     </div>
-  );
+  }
+
+  return (
+    <div>
+      {windowWidth < 787? mobile() : <Desktop/>}
+    </div>
+     );
 }
 
 export default App;
