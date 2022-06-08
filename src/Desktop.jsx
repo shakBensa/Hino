@@ -50,7 +50,7 @@ function Desktop() {
         <div style={{display:'flex'}} >
         {/* <p className='regular' style={{color:'white',margin:'0',fontSize:14,marginRight:'10px',marginLeft:'11px'}} >אני מאשר קבלת חומרים פרסומיים</p>  */}
 
-<div style={{position:'absolute',top:'286px',left:'305px'}}>
+<div style={{position:'absolute',top:'281px',left:'305px'}}>
 {!clicked? <img src={CheckBox}  alt="CheckBox" height='22px'width='23px' style={{marginTop:'3px'}} onClick={()=>setClicked(true)}></img> 
         : <img src={CheckedBox} alt="Checked"   onClick={()=>setClicked(false)}></img>}
 
