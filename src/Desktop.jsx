@@ -32,7 +32,7 @@ function Desktop() {
         {/* <p className='regular' 
         style={{color:'white',margin:'0',marginTop:'10px',marginBottom:'8px',
         fontSize:23,display:'flex',justifyContent:'center',}} >:השאר פרטים ונצא לדרך</p>  */}
-        <div className='inputContainer' style={{position:'absolute',marginLeft:'45px',marginTop:'220px'}}>
+        <div className='inputContainer' style={{position:'absolute',marginLeft:'45px',marginTop:'225px'}}>
         <input value={name} 
         placeholder='שם מלא' 
         onChange={(e) => setName(e.target.value)} required ></input>
