@@ -6,10 +6,14 @@ import Send from './Assets/Send.png';
 import CheckedBox from './Assets/ClickedBox.png';
 import CheckBox from './Assets/CheckBox.png';
 import Desktop from './Desktop';
-import {useState,useEffect} from 'react'
+import db from './firebase';
+import firebase from 'firebase/app';
+import {useState,useEffect,Alert} from 'react';
 import './App.css';
-import './fonts/almoni-neue-medium-aaa.otf'
+import './fonts/almoni-neue-medium-aaa.otf';
 function App() {
+
+
   const [clicked,setClicked] = useState(false)
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -24,6 +28,14 @@ function App() {
     return () => window.removeEventListener("resize", updateWidth);
 
   },[])
+  const submitHandler = ()=>{
+    db.collection('leads').add({
+      name:name,
+      phone:phone,
+      mail:mail,
+    })
+    Alert.alert('success')
+  }
 
   const mobile = ()=>{
     return <div className="App"
@@ -50,14 +62,15 @@ function App() {
         <img src={Send} alt="Send"
              onMouseDown={() => touchedSet(true)}
              onMouseUp={() => touchedSet(false)}
+            //  onClick={()=> submitHandler()}
             style={{ opacity: touched ? 0.8 : 1, transition: 'opacity 200ms ease' }}
           ></img>
         <div style={{display:'flex'}} >
         <p className='regular' style={{color:'white',margin:'0',fontSize:14,marginRight:'10px',marginLeft:'11px'}} >אני מאשר קבלת חומרים פרסומיים</p> 
 
 
-        {!clicked? <img src={CheckBox} alt="CheckBox" style={{marginBottom:'5px'}} onClick={()=>setClicked(true)}></img> 
-        : <img src={CheckedBox} alt="Checked" style={{marginBottom:'5px'}} onClick={()=>setClicked(false)}></img>}
+        {!clicked? <img src={CheckBox} alt="CheckBox" style={{marginBottom:'5px',marginRight:'4px'}} onClick={()=>setClicked(true)}></img> 
+        : <img src={CheckedBox} alt="Checked" style={{marginBottom:'5px',marginRight:'4px'}} onClick={()=>setClicked(false)}></img>}
 
         </div>
         <p className='font-face-gm' style={{color:'white',margin:'0',paddingTop:'10px',fontSize:24,}} >יוניון רכב תעשייתי</p> 
