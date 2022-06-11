@@ -4,7 +4,10 @@ import MainTruck from './Assets/Desktop/MainTruck.png';
 import CheckedBox from './Assets/Desktop/BlackCheck.png';
 import CheckBox from './Assets/Desktop/CheckBox.png';
 import Send from './Assets/Desktop/Send.png';
+import db from './firebase';
+import {collection,addDoc } from "firebase/firestore"; 
 import {useState,useEffect} from 'react'
+import { getAnalytics, logEvent } from "firebase/analytics";
 import './desktop.css';
 import './fonts/almoni-neue-medium-aaa.otf'
 function Desktop() {
@@ -22,6 +25,21 @@ function Desktop() {
     return () => window.removeEventListener("resize", updateWidth);
 
   },[])
+  const submitHandler = async () => {
+    const colRef = collection(db, 'leads')
+    const payload = {
+      name: name,
+      phone: phone,
+      mail: mail,
+      ads: clicked
+    }
+    await addDoc(colRef, payload)
+    const analytics = getAnalytics();
+    logEvent(analytics, 'sign_up');
+    
+
+    console.log("Document written with Name: ", name);
+  }
   return (
     <div className="App"
     >
@@ -45,6 +63,7 @@ function Desktop() {
         <img src={Send} alt="Send"
              onMouseDown={() => touchedSet(true)}
              onMouseUp={() => touchedSet(false)}
+             onClick={()=> submitHandler()}
             style={{ opacity: touched ? 0.8 : 1, transition: 'opacity 200ms ease' }}
           ></img>
         <div style={{display:'flex'}} >

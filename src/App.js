@@ -7,12 +7,12 @@ import CheckedBox from './Assets/ClickedBox.png';
 import CheckBox from './Assets/CheckBox.png';
 import Desktop from './Desktop';
 import db from './firebase';
-import firebase from 'firebase/app';
+import { getAnalytics, logEvent } from "firebase/analytics";
+import { collection,addDoc } from "firebase/firestore"; 
 import {useState,useEffect,Alert} from 'react';
 import './App.css';
 import './fonts/almoni-neue-medium-aaa.otf';
 function App() {
-
 
   const [clicked,setClicked] = useState(false)
   const [name, setName] = useState("");
@@ -20,6 +20,8 @@ function App() {
   const [mail, setMail] = useState("");
   const [touched, touchedSet] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const analytics = getAnalytics();
+
   const updateWidth = () => {
     setWindowWidth(window.innerWidth);
   };
@@ -28,13 +30,18 @@ function App() {
     return () => window.removeEventListener("resize", updateWidth);
 
   },[])
-  const submitHandler = ()=>{
-    db.collection('leads').add({
-      name:name,
-      phone:phone,
-      mail:mail,
-    })
-    Alert.alert('success')
+  const submitHandler = async () => {
+    const colRef = collection(db, 'leads')
+    const payload = {
+      name: name,
+      phone: phone,
+      mail: mail,
+      ads: clicked
+    }
+    await addDoc(colRef, payload)
+
+    logEvent(analytics, 'sign_up');
+    console.log("Document written with Name: ", name);
   }
 
   const mobile = ()=>{
@@ -62,7 +69,7 @@ function App() {
         <img src={Send} alt="Send"
              onMouseDown={() => touchedSet(true)}
              onMouseUp={() => touchedSet(false)}
-            //  onClick={()=> submitHandler()}
+             onClick={()=> submitHandler()}
             style={{ opacity: touched ? 0.8 : 1, transition: 'opacity 200ms ease' }}
           ></img>
         <div style={{display:'flex'}} >
